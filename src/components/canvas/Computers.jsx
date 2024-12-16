@@ -54,8 +54,14 @@ const ComputersCanvas = () => {
 
   return (
     <div 
-      className="absolute inset-0 z-[20] cursor-grab active:cursor-grabbing"
-      style={{ pointerEvents: 'auto' }}
+      className="absolute inset-0 z-[30]"
+      style={{ 
+        pointerEvents: 'auto',
+        cursor: 'grab',
+        touchAction: 'none',
+        userSelect: 'none',
+        WebkitUserSelect: 'none'
+      }}
     >
       <Canvas
         frameloop="always"
@@ -63,7 +69,10 @@ const ComputersCanvas = () => {
         dpr={[1, 2]}
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true, antialias: true }}
-        style={{ touchAction: 'none' }}
+        style={{ 
+          touchAction: 'none',
+          outline: 'none'
+        }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls

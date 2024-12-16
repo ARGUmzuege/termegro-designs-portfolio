@@ -10,14 +10,19 @@ const Hero = () => {
   const { t } = useLanguage();
   
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
       {/* Background with Particles */}
       <div className="absolute inset-0 z-[1]">
         <Particles count={2000} color="#915eff" />
       </div>
 
+      {/* 3D Computer Model */}
+      <div className="absolute inset-0 z-[5]">
+        <ComputersCanvas />
+      </div>
+
       {/* Main Content */}
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-[15] pointer-events-none`}>
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-[15] pointer-events-none select-none`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <motion.div
             variants={heroAnimations.floatingElement}
@@ -65,11 +70,6 @@ const Hero = () => {
             {t('hero.subDescription')}
           </motion.p>
         </div>
-      </div>
-
-      {/* 3D Computer Model */}
-      <div className="absolute inset-0 z-[5]">
-        <ComputersCanvas />
       </div>
 
       {/* Scroll Indicator */}
