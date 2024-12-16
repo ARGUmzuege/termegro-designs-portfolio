@@ -52,23 +52,25 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop="always"
-      shadows
-      camera={{ position: [15, 3, 15], fov: 30 }}
-      gl={{ preserveDrawingBuffer: true, antialias: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Computers isMobile={isMobile} />
-      </Suspense>
+    <div className="absolute inset-0 z-0">
+      <Canvas
+        frameloop="always"
+        shadows
+        camera={{ position: [15, 3, 15], fov: 30 }}
+        gl={{ preserveDrawingBuffer: true, antialias: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+          />
+          <Computers isMobile={isMobile} />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 
