@@ -9,12 +9,12 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       {/* Background with Particles */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-[1]">
         <Particles count={2000} color="#915eff" />
       </div>
 
       {/* Main Content */}
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10`}>
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-[15]`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <motion.div
             variants={heroAnimations.floatingElement}
@@ -59,12 +59,12 @@ const Hero = () => {
       </div>
 
       {/* 3D Computer Model */}
-      <div className="absolute inset-0 z-20">
+      <div className="absolute inset-0 z-[5]">
         <ComputersCanvas />
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-30">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[20]">
         <a href="#about">
           <motion.div
             variants={heroAnimations.floatingElement}
