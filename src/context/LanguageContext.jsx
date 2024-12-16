@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import { en } from '../locales/en';
 import { de } from '../locales/de';
 import { ru } from '../locales/ru';
@@ -24,7 +24,16 @@ function useLanguage() {
 }
 
 function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState('de'); // Default language
+  const [language, setLanguage] = useState(() => {
+    // Try to get the language from localStorage, fallback to 'de'
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    return savedLanguage && translations[savedLanguage] ? savedLanguage : 'de';
+  });
+
+  // Save language preference to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('preferredLanguage', language);
+  }, [language]);
 
   const t = (key) => {
     if (!key) return '';
