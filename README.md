@@ -1,8 +1,43 @@
-# React + Vite
+# Termegro Designs Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eine moderne Portfolio-Website mit 3D-Animationen und mehrsprachiger Unterstützung.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 3D Animationen mit Three.js
+- Responsive Design
+- Mehrsprachige Unterstützung (DE, EN, RU, TR, AZ)
+- Interaktive Benutzeroberfläche
+- Moderne UI mit Tailwind CSS
+- Kontaktformular
+- Projektgalerie
+- Technologie-Showcase
+
+## Technologien
+
+- React.js
+- Three.js
+- Tailwind CSS
+- Framer Motion
+- i18n für Mehrsprachigkeit
+
+## Installation
+
+1. Repository klonen
+```bash
+git clone [repository-url]
+```
+
+2. Abhängigkeiten installieren
+```bash
+npm install
+```
+
+3. Entwicklungsserver starten
+```bash
+npm run dev
+```
+
+## Live Demo
+
+[Link zur Live-Demo wird hier eingefügt]
