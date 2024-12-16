@@ -8,6 +8,7 @@ const Computers = ({ isMobile }) => {
 
   return (
     <mesh>
+      <hemisphereLight intensity={0.15} groundColor="black" />
       <ambientLight intensity={0.8} />
       <directionalLight intensity={1} position={[0, 0, 1]} />
       
@@ -26,7 +27,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.5 : 0.7}
-        position={isMobile ? [0, -3, -1.5] : [0, -2.5, -1.5]}
+        position={isMobile ? [2, -3, -1] : [2, -2.5, -1]}
         rotation={[0, Math.PI * 0.15, 0]}
       />
     </mesh>
@@ -52,20 +53,21 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 z-[10]">
       <Canvas
         frameloop="always"
         shadows
-        camera={{ position: [15, 3, 15], fov: 30 }}
+        camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true, antialias: true }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
+            maxPolarAngle={Math.PI}
+            minPolarAngle={0}
             enableRotate={true}
             enablePan={false}
+            rotateSpeed={0.5}
           />
           <Computers isMobile={isMobile} />
         </Suspense>
