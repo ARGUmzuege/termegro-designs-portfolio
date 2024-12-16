@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-[100] bg-primary pointer-events-auto`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto relative">
         <Link
@@ -31,7 +31,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <div className="flex items-center gap-6 relative z-50">
+        <div className="flex items-center gap-6 relative z-[100]">
           {/* Language Selector */}
           <LanguageSelector />
 
@@ -59,7 +59,7 @@ const Navbar = () => {
               onClick={() => setToggle(!toggle)}
             />
 
-            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-50 rounded-xl`}>
+            <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-[100] rounded-xl`}>
               <ul className="list-none flex justify-end items-start flex-col gap-4">
                 {navLinks.map((nav) => (
                   <li

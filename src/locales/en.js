@@ -1,4 +1,10 @@
 export const en = {
+  hero: {
+    greeting: "Welcome to",
+    role: "Termegro Designs",
+    description: "We create digital experiences that inspire",
+    subDescription: "Specialized in modern web development, 3D visualizations, and innovative design solutions. We combine creativity with technical expertise to craft unique digital experiences."
+  },
   nav: {
     about: "About",
     work: "Work",

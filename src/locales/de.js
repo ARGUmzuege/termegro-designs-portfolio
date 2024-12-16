@@ -1,4 +1,10 @@
 export const de = {
+  hero: {
+    greeting: "Willkommen bei",
+    role: "Termegro Designs",
+    description: "Wir kreieren digitale Erlebnisse, die begeistern",
+    subDescription: "Spezialisiert auf moderne Webentwicklung, 3D-Visualisierungen und innovative Designlösungen. Wir verbinden Kreativität mit technischer Expertise, um einzigartige digitale Erlebnisse zu schaffen."
+  },
   nav: {
     about: "Über mich",
     work: "Projekte",

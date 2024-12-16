@@ -4,8 +4,11 @@ import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
 import { heroAnimations } from '../utils/animations';
 import Particles from './canvas/Particles';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative w-full h-screen mx-auto">
       {/* Background with Particles */}
@@ -35,14 +38,14 @@ const Hero = () => {
             animate="animate"
             className={`${styles.heroHeadText} text-white`}
           >
-            Hi, Ich bin{" "}
+            {t('hero.greeting')}{" "}
             <motion.span
               variants={heroAnimations.highlight}
               initial="initial"
               animate="animate"
               className="text-[#915eff]"
             >
-              Entwickler
+              {t('hero.role')}
             </motion.span>
           </motion.h1>
           <motion.p
@@ -51,9 +54,15 @@ const Hero = () => {
             animate="animate"
             className={`${styles.heroSubText} mt-2 text-white-100`}
           >
-            Ich entwickle 3D Visuals, User{" "}
-            <br className="sm:block hidden" />
-            Interfaces und Web Applikationen
+            {t('hero.description')}
+          </motion.p>
+          <motion.p
+            variants={heroAnimations.fadeInScale}
+            initial="initial"
+            animate="animate"
+            className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          >
+            {t('hero.subDescription')}
           </motion.p>
         </div>
       </div>
