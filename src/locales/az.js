@@ -1,7 +1,13 @@
 export const az = {
+  hero: {
+    greeting: "Xoş gəlmisiniz",
+    role: "Termegro Designs",
+    description: "İlhamlandıran rəqəmsal təcrübələr yaradırıq",
+    subDescription: "Müasir veb inkişaf, 3D vizuallaşdırma və innovativ dizayn həllərində ixtisaslaşmışıq. Unikal rəqəmsal təcrübələr yaratmaq üçün yaradıcılığı texniki təcrübə ilə birləşdiririk."
+  },
   nav: {
-    about: "Haqqımda",
-    work: "İşlər",
+    about: "Haqqımızda",
+    work: "Layihələr",
     contact: "Əlaqə"
   },
   works: {
