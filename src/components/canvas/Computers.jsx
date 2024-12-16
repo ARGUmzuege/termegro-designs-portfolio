@@ -27,8 +27,8 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.5 : 0.7}
-        position={isMobile ? [2, -3, -1] : [2, -2.5, -1]}
-        rotation={[0, Math.PI * 0.15, 0]}
+        position={isMobile ? [3, -3, 0] : [3, -2.5, 0]}
+        rotation={[0, -Math.PI * 0.15, 0]}
       />
     </mesh>
   );
@@ -53,12 +53,17 @@ const ComputersCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-[10]">
+    <div 
+      className="absolute inset-0 z-[20] cursor-grab active:cursor-grabbing"
+      style={{ pointerEvents: 'auto' }}
+    >
       <Canvas
         frameloop="always"
         shadows
+        dpr={[1, 2]}
         camera={{ position: [20, 3, 5], fov: 25 }}
         gl={{ preserveDrawingBuffer: true, antialias: true }}
+        style={{ touchAction: 'none' }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
@@ -67,7 +72,12 @@ const ComputersCanvas = () => {
             minPolarAngle={0}
             enableRotate={true}
             enablePan={false}
-            rotateSpeed={0.5}
+            rotateSpeed={1}
+            autoRotate={false}
+            dampingFactor={0.05}
+            minDistance={5}
+            maxDistance={15}
+            makeDefault
           />
           <Computers isMobile={isMobile} />
         </Suspense>

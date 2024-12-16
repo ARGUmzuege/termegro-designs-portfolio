@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-[15]`}>
+      <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-[15] pointer-events-none`}>
         <div className="flex flex-col justify-center items-center mt-5">
           <motion.div
             variants={heroAnimations.floatingElement}
@@ -73,8 +73,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[20]">
-        <a href="#about">
+      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-[25] pointer-events-none">
+        <a href="#about" className="pointer-events-auto">
           <motion.div
             variants={heroAnimations.floatingElement}
             animate="animate"
