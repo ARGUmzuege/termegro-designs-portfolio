@@ -2,6 +2,10 @@
 
 Eine moderne Portfolio-Website mit 3D-Animationen und mehrsprachiger Unterstützung.
 
+## Live Demo
+
+🌐 [Besuche die Live-Website](https://argumzuege.github.io/termegro-designs-portfolio/)
+
 ## Features
 
 - 3D Animationen mit Three.js
@@ -25,7 +29,7 @@ Eine moderne Portfolio-Website mit 3D-Animationen und mehrsprachiger Unterstütz
 
 1. Repository klonen
 ```bash
-git clone [repository-url]
+git clone https://github.com/ARGUmzuege/termegro-designs-portfolio.git
 ```
 
 2. Abhängigkeiten installieren
@@ -37,7 +41,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-## Live Demo
-
-[Link zur Live-Demo wird hier eingefügt]
